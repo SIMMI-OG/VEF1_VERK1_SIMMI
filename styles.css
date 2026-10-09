@@ -1,0 +1,189 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Rokkitt', serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));    
+    color: white;
+}
+h1, h2, h3 {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+} 
+header {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+header h1 {
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 -2px 8px rgb(0, 242, 255);
+    color: rgb(65, 75, 255);
+}
+
+
+a {
+    color: rgb(221, 45, 1);
+}
+a:visited {
+    columns: rgb(221, 45, 1);
+}
+a:hover, a:active {
+    columns: #000;
+    text-decoration: none;
+}
+.base-bg {
+    background-color: rgb(255, 236, 185);
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));    
+    color: rgb(0, 0, 0);
+    padding: 1em;
+}
+
+.col-2,
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/****** standard IMG *********/
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+figure {
+    margin:0;
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    padding: 1em;
+}
+footer ul{
+    list-style: none;
+}
+a, footer a {
+    color: rgb(255, 65, 65);
+}
+footer a {
+    line-height: 1.5;
+}
+footer a:visited {
+    color: rgb(255, 81, 0);
+}
+footer a:active, .footer a:hover {
+    text-decoration: none;
+}
+blockquote {
+    background-color: rgba(22, 56, 250, 0.5);
+    padding:1em;
+}
+.copy {
+    text-align: center;
+}
+
+
+/* EFRA NAV - SÍMAR OG GRUNNSTILLINGAR */
+nav.links {
+    background-color: white;
+    padding: 1em;
+}
+
+nav.links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav.links li {
+    text-align: center;
+}
+
+nav.links a {
+    text-decoration: none;
+    color: rgb(255, 65, 65);
+}
+
+/* ******** 48em ********* */
+@media screen and (min-width: 48em) {
+
+    .col-2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+    }
+
+    .col-3 {
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        row-gap: 1em;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    /* EFRA NAV - TÖLVUR */
+    nav.links ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+
+}
+
+/* ******** 60em ********* */
+@media screen and (min-width: 60em) {
+
+    .col-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+        row-gap: 2em;
+    }
+
+    .col-21 {
+        grid-template-columns: 2fr 1fr;
+        gap: 2em;
+    }
+
+}
+@media screen and (min-width:80em) {
+    body {
+        font-size: 1.4rem;
+    }
+    .container {
+        max-width: 80em;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 6em;
+    }
+    
+}
+@media screen and (min-width:100em) {
+    .container {
+        max-width: 90em;
+    }
+}
+
+
+@media screen and (max-width: 47.99em) {
+    img {
+        display: none;
+    }
+    figcaption {
+        display: none;
+    }
+}
